@@ -1,0 +1,11 @@
+name: Combinations
+on: push
+jobs:
+    example_matrix:
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          sources: [A, B]
+          dests: [C, D]
+      steps:
+        - run: echo "Going from ${{ matrix.sources }} to ${{ matrix.dests }}"
